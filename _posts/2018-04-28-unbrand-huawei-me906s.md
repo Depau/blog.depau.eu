@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Unbranding a Huawei ME906s WWAN/4G module
+tags: me906s lt4132 reverse-engineering linux
 ---
 (or rebranding it)
 
