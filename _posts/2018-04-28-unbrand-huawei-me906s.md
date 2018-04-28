@@ -45,8 +45,8 @@ After reading the article, I stumbled upon [this](http://ftp.hp.com/pub/softpaq/
 At some point, a software I read of in a magazine while I was in middle school came to my mind: [Resource Hacker](http://www.angusj.com/resourcehacker/#download). It's a closed-source, freeware program to extract resources embedded in Windows executables. I ran it and compared Lenovo's and HP's update tools:
 
 HP on the left - Lenovo on the right
-![shot-2018-04-28_00-40-17.png]({{site.baseurl}}/images/shot-2018-04-28_00-40-17.png)
-![shot-2018-04-28_00-41-43.png]({{site.baseurl}}/images/shot-2018-04-28_00-41-43.png)
+![Configuration file]({{site.baseurl}}/images/unbranding-me906s/shot-2018-04-28_00-40-17.png)
+![Device identification XML]({{site.baseurl}}/images/unbranding-me906s/shot-2018-04-28_00-41-43.png)
 
 Everything is identical, except for these two files (and a huge firmware blob). Looking closely at the XML you can notice the only difference between Lenovo and HP is that HP added two lines containing its rebranded device names _(read: the installer only checks the device's name, not the IDs)_.
 
@@ -69,3 +69,7 @@ I made some backups of both update binaries, opened Lenovo's updater with Resour
 1. In this directory you'll find `UpdateWizard.exe`. It contains everything we need. You'll also find some drivers, they might be helpful. Install them.
 1. Using Resource Hacker (it doesn't work well on Wine, use Windows) find the XML in `STRINGS`. Replace it with the one from HP's `UpdateWizard.exe`.
 1. Run the binary and... you're done.
+
+
+![Flashing firmware]({{site.baseurl}}/images/unbranding-me906s/windows1.png)
+![Upload completed]({{site.baseurl}}/images/unbranding-me906s/windows2.png)
