@@ -3,6 +3,8 @@ published: false
 ---
 # Unbranding a Huawei ME906s WWAN/4G module
 
+(or rebranding it)
+
 ### **Before you ask:** both the X1 Yoga and the X1 Carbon have NO ANTENNA, unless you have the 4G version. The SIM slot should work fine on all models (but it's not my fault if it doesn't)
 
 Around one year ago I bought a new laptop, a Lenovo ThinkPad X1 Yoga (1st gen). To save some money I bought it on eBay; it was not the top model with the 4G module I wanted, but I thought I may live without it anyway.
@@ -47,7 +49,7 @@ HP on the left - Lenovo on the right
 ![shot-2018-04-28_00-40-17.png]({{site.baseurl}}/_posts/shot-2018-04-28_00-40-17.png)
 ![shot-2018-04-28_00-41-43.png]({{site.baseurl}}/_posts/shot-2018-04-28_00-41-43.png)
 
-Everything is identical, except for these two files (and the huge firmware blob). Looking closely at the XML you can notice the only difference between Lenovo and HP is that HP added two lines containing its rebranded device names (read: the installer only checks the device's name, not the IDs).
+Everything is identical, except for these two files (and a huge firmware blob). Looking closely at the XML you can notice the only difference between Lenovo and HP is that HP added two lines containing its rebranded device names _(read: the installer only checks the device's name, not the IDs)_.
 
 I made some backups of both update binaries, opened Lenovo's updater with Resource Hacker and swapped the XML with HP's.
 
@@ -55,10 +57,11 @@ I made some backups of both update binaries, opened Lenovo's updater with Resour
 
 ## Do it yourself
 
-- **Note 1:** it will likely **not** work on VirtualBox. You can, however, use it to see if the updater recognizes the device: remove any *catchall* USB filter from VBox and select the module; the updater will try to reboot the device into download mode, but VirtualBox won't automatically connect it back to the VM, so nothing will happen.
-- **Note 2:** keep a few copies of the patched executable. If flashing fails, delete the copy you used and use another. The updater writes something somewhere within it's directory and makes sure subsequent flashes fail.
+- **Note 1:** it will likely **not** work on VirtualBox. You can, however, use it to see if the updater recognizes the device: remove any *catchall* USB filter from VBox and select the module; the updater will try to reboot the device into download mode, but VirtualBox won't automatically reconnect it back to the VM, so nothing will happen.
+- **Note 2:** keep a few copies of the patched executable. If flashing fails, delete the copy you used and use another. The updater writes something somewhere in it's own directory and makes sure subsequent flashes fail.
 - **Note 3:** you'll have to make the executables yourself. Redistributing them is illegal.
 - **Note 4:** the device is blacklisted in non-HP devices. To bypass the blacklist, plug it in while the computer is on or in standby, otherwise it will refuse to boot.
+- **Note 5:** if you have an HP device, unbranding it will probably get you in the blacklist. You may be able to use HP's updater (likely with no patches) to rebrand it (not tested).
 
 1. Download the updaters from both [Lenovo](https://support.lenovo.com/it/en/downloads/ds118646) and [HP](http://ftp.hp.com/pub/softpaq/sp79501-80000/sp79601.exe).
 1. Run each installer and find where files are extracted. You'll find one file. Copy it somewhere else.
