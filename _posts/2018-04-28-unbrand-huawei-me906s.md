@@ -61,6 +61,7 @@ I made some backups of both update binaries, opened Lenovo's updater with Resour
 - **Note 3:** you'll have to make the executables yourself. Redistributing them is illegal.
 - **Note 4:** the device is blacklisted in non-HP devices. To bypass the blacklist, plug it in while the computer is on or in standby, otherwise it will refuse to boot.
 - **Note 5:** if you have an HP device, unbranding it will probably get you in the blacklist. You may be able to use HP's updater (likely with no patches) to rebrand it (not tested).
+- **Note 6:** You take all the responsibility for what you do with your hardware. *It worked on my machine*, it's not my responsibility if it doesn't work on yours.
 
 1. Download the updaters from both [Lenovo](https://support.lenovo.com/it/en/downloads/ds118646) and [HP](http://ftp.hp.com/pub/softpaq/sp79501-80000/sp79601.exe).
 1. Run each installer and find where files are extracted. You'll find one file. Copy it somewhere else.
