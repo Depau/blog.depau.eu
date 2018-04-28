@@ -1,8 +1,7 @@
 ---
-published: false
+layout: post
+title: Unbranding a Huawei ME906s WWAN/4G module
 ---
-# Unbranding a Huawei ME906s WWAN/4G module
-
 (or rebranding it)
 
 ### **Before you ask:** both the X1 Yoga and the X1 Carbon have NO ANTENNA, unless you have the 4G version. The SIM slot should work fine on all models (but it's not my fault if it doesn't)
