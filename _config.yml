@@ -37,9 +37,9 @@ kramdown:
     css_class: 'highlight'
 
 nav:
- - name: "About"
+ - name: "<i class='fa fa-home'></i> About"
    link: "https://depau.eu"
- - name: "GitHub"
+ - name: "<i class='fa fa-github'></i> GitHub"
    link: "https://github.com/Depau"
- - name: "EtchDroid"
+ - name: "<i class='fa fa-android'></i> EtchDroid"
    link: "https://etchdroid.depau.eu"
