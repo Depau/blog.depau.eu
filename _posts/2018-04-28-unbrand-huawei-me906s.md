@@ -23,6 +23,8 @@ I received it today and realized that:
 
 I still haven't solved the antenna issue - I'll probably buy a cheap-ass one and tape it on top of the battery. Hopefully signal will be good enough.
 
+> **UPDATE**: I ended up buying [this one](https://www.ebay.it/itm/2pcs-IPEX-MHF4-Antenna-for-NGFF-M-2-ME906E-ME906S-158-EM7345-EM7455-7260-7265/272694663387) from eBay. Signal is not the best I could get but it works perfectly.
+
 I did, though, solve the whitelist issue.
 
 ## Information gathering
