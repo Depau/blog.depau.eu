@@ -14,16 +14,16 @@ EtchDroid *will* continue to exist and I *will* find some time to work on it thi
 
 In fact, I have some improvements I'd like to do:
 
-- Fix the annoying Android 9 bug
+- Fix the annoying Android 9 bug ([#10](https://github.com/EtchDroid/EtchDroid/issues/10))
 
   Mainly because it's very annoying, but also because I run Android 9 on *my motherfucking phone*. I can't even use my own app!
-- Rewrite internals
+- Rewrite internals ([#15](https://github.com/EtchDroid/EtchDroid/issues/15))
 
-  At my [last workplace](https://www.bottega52.it/) I learned **a lot** on how to write better code that is maintainable and portable, which are things that I want in EtchDroid. Part of this is already done in a feature branch.
-- Add support for Windows ISOs
+  At my [last workplace](https://www.bottega52.it/) I learned **a lot** on how to write better code that is maintainable and portable, which are things that I want in EtchDroid. Part of this is already done in the [`develop`](https://github.com/EtchDroid/EtchDroid/commits/develop) branch.
+- Add support for Windows ISOs ([#5](https://github.com/EtchDroid/EtchDroid/issues/5))
 
   Arch Linux is my daily driver but I do need Windows occasionally. WoeUSB is great but my phone is way lighter than my laptop if I need it for someone else.
-- On-the-fly download and flash
+- On-the-fly download and flash ([#14](https://github.com/EtchDroid/EtchDroid/issues/14))
 
   Possibly with a repository of GNU/Linux distros.
 - Resumable flashes
@@ -31,7 +31,7 @@ In fact, I have some improvements I'd like to do:
 
   I have some usability improvents in mind ;)
 
-- macOS installer support
+- macOS installer support ([#6](https://github.com/EtchDroid/EtchDroid/issues/6))
 
   macOS installer is kinda weird, so don't hold your breath.
 
