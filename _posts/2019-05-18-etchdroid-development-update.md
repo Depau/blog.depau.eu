@@ -19,7 +19,7 @@ In fact, I have some improvements I'd like to do:
   Mainly because it's very annoying, but also because I run Android 9 on *my motherfucking phone*. I can't even use my own app!
 - Rewrite internals
 
-  At my last workplace I learned **a lot** on how to write better code that is maintainable and portable, which are things that I want in EtchDroid. Part of this is already done in a feature branch.
+  At my [last workplace](https://www.bottega52.it/) I learned **a lot** on how to write better code that is maintainable and portable, which are things that I want in EtchDroid. Part of this is already done in a feature branch.
 - Add support for Windows ISOs
 
   Arch Linux is my daily driver but I do need Windows occasionally. WoeUSB is great but my phone is way lighter than my laptop if I need it for someone else.
