@@ -132,9 +132,8 @@ div.cc-window {
     font-family: "Nanum Gothic Coding", monospace;
 }
 
-.navbar [class^="remixicon-"] {
-    position: relative;
-    top: 3px;
+.navbar [class^="remixicon-"]::before {
+    vertical-align: bottom;
 }
 
 @import "typography";
