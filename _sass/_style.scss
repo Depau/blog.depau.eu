@@ -132,5 +132,10 @@ div.cc-window {
     font-family: "Nanum Gothic Coding", monospace;
 }
 
+.navbar [class^="remixicon-"] {
+    position: relative;
+    top: 3px;
+}
+
 @import "typography";
 @import "tables";
