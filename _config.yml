@@ -12,6 +12,9 @@ footer: yes
 footer_url: "https://github.com/Depau/blog.depau.eu"
 footer_text: "Blog source code on GitHub"
 
+cookies: yes
+cookies_url: "https://depau.eu/cookies"
+
 sass:
     style: compressed
     sass_dir: _sass
@@ -37,7 +40,7 @@ kramdown:
     css_class: 'highlight'
 
 nav:
- - name: "<i class='remixicon-home-line'></i> About"
+ - name: "<i class='remixicon-user-2-line'></i> About me"
    link: "https://depau.eu"
  - name: "<i class='remixicon-github-line'></i> GitHub"
    link: "https://github.com/Depau"
