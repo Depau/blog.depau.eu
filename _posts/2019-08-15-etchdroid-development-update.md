@@ -84,3 +84,7 @@ Having this structure makes it easy to add new features. If I wanted to add supp
 That's it for this update, I'll go back to work on it.
 
 If you have any suggestions or questions, please send me an email! The address is in my homepage, [depau.eu](https://depau.eu).
+
+### Bonus: EtchDroid development rig 😂
+
+![EtchDroid setup]({{ site.baseurl  }}/images/2019-08-15-etchdroid-development-update/etchdroid-dev-env.jpg)
