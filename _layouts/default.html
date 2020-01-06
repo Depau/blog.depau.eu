@@ -10,6 +10,9 @@
     {% if page.url == "/404.html" %}
         <meta http-equiv="refresh" content="5; url=/">
     {% endif %}
+
+    {% include favicon.html %}
+
     {% if page.description %}
         {% assign desc = page.description %}
     {% else %}
@@ -25,10 +28,6 @@
     <link href='https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700' rel='stylesheet' type='text/css'>
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="/feed.xml" />
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
-    {% if site.favicon %}
-        <link rel="icon" type="image/ico" href="{{ site.favicon_location }}">
-        <link rel="shortcut-icon" type="image/ico" href="{{ site.favicon_location }}">
-    {% endif %}
     {% if site.twitter_username %}
         <link rel="author" href="https://twitter.com/{{ site.twitter_username }}">
     {% endif %}
