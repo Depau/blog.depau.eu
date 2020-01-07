@@ -288,6 +288,8 @@ Cons:
 
 ### CentOS/RHEL
 
+![Change my mind]({{site.baseurl}}/images/2020-01-06-why-i-use-arch/centos-sucks.jpg)
+
 Pros:
 - None, I hate every single time I have to touch a system running
   one of these two distros.
@@ -314,6 +316,7 @@ Cons:
   You tell me it's all super tested and stable. Well **Ubuntu LTS is
   just as stable**, but the kernel and Firefox are reasonably up to
   date and htop is available (EPEL and COPR my ass)
+- I mean, I can use it. I just have so many questions. Why? Why!
 
 ### Manjaro
 
