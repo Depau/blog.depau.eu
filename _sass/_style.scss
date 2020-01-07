@@ -19,9 +19,11 @@ a {
     text-decoration: none;
     color: $accent;
 }
+
 a:hover {
-    text-decoration: underline;
+  border-bottom: solid 2px;
 }
+
 hr {
     border: 0;
     height: 0;
@@ -37,6 +39,12 @@ hr {
     font-size: 30px;
     color: #272727;
     display: inline-block;
+
+    &:hover {
+        border-bottom: solid 2px;
+        padding-bottom: 4px;
+        margin-bottom: -6px;
+    }
 }
 .navbar {
     padding: 50px 0 50px 0;
@@ -50,6 +58,11 @@ hr {
 .nav-list {
     list-style-type: none;
     margin: 0 5px 0 10px;
+
+    a:hover i {
+        position: relative;
+        top: -1px;
+    }
 }
 .alignable {
     display: inline-block;
