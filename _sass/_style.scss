@@ -1,6 +1,7 @@
 @import "vars";
 
-$font: "Nanum Gothic Coding", monospace;
+$font: "IBM Sans Mono", monospace;
+$heading_font: "Nanum Gothic Coding", monospace;
 
 /*
  * Basic
@@ -63,6 +64,7 @@ code {
 }
 .navbar {
     padding: 50px 0 50px 0;
+    font-family: $heading_font;
 }
 .navbar-ul {
     display: inline-block;
