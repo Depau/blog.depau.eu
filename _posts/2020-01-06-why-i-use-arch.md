@@ -134,7 +134,7 @@ thing plus who knows what else. There's something like 20 different
 build tools that build a package in a slightly different manner.
 My toilet paper has better instruction than any of those tools,
 and no page on their wikis can apparently agree on which one is the
-right one to use.
+right one to use (at least last time I checked).
 
 Also good luck finding a MOTU/Debian developer that will maintain
 your package, they'll stare at you sitting on top of a pile of paper
@@ -167,7 +167,7 @@ sliced bread; the Gentoo Wiki is the second best thing.
 If you have a little bit of knowledge, you can do whatever you want.
 If you don't, the Wiki is there, read every single sentence and the
 knowledge will permeate your body. **Seriously**. It's concise (unless
-I'm the author of the page), not repetitive, clear.
+I'm the author of that particular page), not repetitive, clear.
 
 You may say Arch Linux has a reputation of breaking suddenly.
 **Does it break? YES.**
