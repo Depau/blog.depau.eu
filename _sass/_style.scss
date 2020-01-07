@@ -1,5 +1,7 @@
 @import "vars";
 
+$font: "Nanum Gothic Coding", monospace;
+
 /*
  * Basic
  */
@@ -11,7 +13,7 @@ html {
 }
 body {
     margin: 0;
-    font-family: "Nanum Gothic Coding", monospace;
+    font-family: $font;
     height: 100%;
     line-height: 130%;
 }
@@ -29,6 +31,19 @@ hr {
     height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+code {
+    background: #FF0F0010;
+    border-radius: 3px;
+    border: solid 1px #FF0F0015;
+    color: #750700;
+    font-family: $font;
+
+    a & {
+      color: $accent;
+      border: solid 1px #FF0F0055;
+    }
 }
 
 /*
@@ -142,7 +157,7 @@ hr {
 }
 
 div.cc-window {
-    font-family: "Nanum Gothic Coding", monospace;
+    font-family: $font;
 }
 
 .navbar [class^="remixicon-"]::before {
