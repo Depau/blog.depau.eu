@@ -282,7 +282,9 @@ Pros:
 Cons:
 - Package manager is slower than fucking APT
 - Narrow selection of third party software
-- Flatpak (I hate it)
+- Flatpak (I kinda don't like it but I don't really have a reason.
+  I'm open to talk about it if you want to tell me why I should
+  like it)
 - I can get all the good things on Arch (except for SELinux),
   without the bad things
 
