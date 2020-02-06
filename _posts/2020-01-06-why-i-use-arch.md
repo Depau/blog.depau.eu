@@ -293,6 +293,11 @@ Cons:
 Pros:
 - None, I hate every single time I have to touch a system running
   one of these two distros.
+- Well okay no, not so much. I just think in a lot of cases it may
+  drive people into making bad design decisions. Otherwise it's
+  still a familiar GNU/Linux distro, it has a decent packaging
+  format and you can be 200% sure your use case won't break because
+  you updated the system.
 
 Cons:
 - Literally no software
@@ -303,15 +308,13 @@ Cons:
 - Systemd from 5 years ago (and Poettering works for Red Hat IIRC)
 - Basically Fedora but you downloaded it from the Wayback Machine
 - It's used primarily in servers, yet it has a graphical installer.
-  I wouldn't complain if it actually did work, but it doesn't. It's
-  overly complicated, not intuitive and buggy. I've seen a coworker
-  try to setup a CentOS VM and it took her 5 days to find out why
-  it would stay stuck in the HTTP proxy selection screen even though
-  her network connection was perfectly fine.
-- No btrfs support (But they have ZFS? Mmh too bad a couple months
-  ago we had a customer who found a corrupted volume in production
-  after a power failure, which is something I would expect a
-  filesystem to be robust against)
+  I wouldn't complain if such installer actually did work, but it
+  doesn't. It's overly complicated, not intuitive and buggy. I've
+  seen a coworker try to setup a CentOS VM and it took her 5 days
+  to find out why it would get stuck in the HTTP proxy selection
+  screen even though her network connection was perfectly fine.
+- No btrfs support (But they have ZFS? - edit: actually I'm told
+  it's not supported officially. Well, good.)
 - No literally why the hell are there sooo many people who like it??
   You tell me it's all super tested and stable. Well **Ubuntu LTS is
   just as stable**, but the kernel and Firefox are reasonably up to
