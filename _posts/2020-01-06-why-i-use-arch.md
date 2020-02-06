@@ -331,7 +331,9 @@ Cons:
 As you may suspect, I am very satisfied with the way Arch Linux works.
 
 However, there is one thing that I **hate** about Arch, that I think
-Ubuntu does better:
+Ubuntu does better (edit: actually 2 - lol):
+
+### Kernel
 
 The kernel is overwritten when you update it 😩
 
@@ -365,6 +367,45 @@ On my servers I run pretty much everything in Docker containers, so
 I don't really care which distro I'm running, as long as it has htop,
 WireGuard, btrfs, ncdu. I use Arch on the machines I interact with
 the most often, Ubuntu on the other ones.
+
+### Multi-*Arch* - Nope
+
+The second thing I don't like is its absent multi-arch support.
+
+It has its pros and its cons, so I'll just do a bulleted list.
+
+Pros:
+- It Keeps It Simple, Stupid
+- Focus on doing good on one, the most popular architecture: x86_64
+
+Cons:
+- Cross-compiling is not supported, it is expected that what you're
+  building will run on the same architecture
+
+Yes, there's Arch Linux ARM. But, let's admit it, it's utter trash
+and I'll tell you why:
+
+- It's not Simple
+- Installation on ARM devices is pretty much:
+  - Download this magic pre-built totally safe and trustable image
+    that they built that will totally make your little cute ARM
+    board work like a charm. I wouldn't be surprised if I were to
+    find one of those with SuperTuxKart preinstalled, I found all
+    sorts of stuff in there.
+  - Flash it to the device
+  - No pacstrap, *we've done it for you* 👌
+  - Remove the bloatware
+- Repo packages are way beyond crazy. Good luck finding the correct
+  proprietary Mali driver for your SoC. Is it `odroid-c2-libgl-x11`
+  or `odroid-c1-libgl-x11`? What about the Wayland build?
+
+In contrast, Manjaro ARM seems to be doing a much better job, but
+it's still not as good as PostmarketOS'. PostmarketOS is definitely
+on the right direction, their build system is good, images are
+generated on your machine *the Arch way*, everything is simple.
+
+I would definitely use it... if it weren't based on Alpine. 🤷
+
 
 ## Neofetch
 
