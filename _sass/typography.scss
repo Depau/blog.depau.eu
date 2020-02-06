@@ -1,8 +1,11 @@
 @import "vars";
 
 .content {
+    a {
+      border-bottom: dotted 1px;
+    }
     a:hover {
-      border-bottom: solid 2px;
+      border-bottom: solid 1px;
     }
     ol {
         counter-reset: list;
