@@ -32,7 +32,8 @@ the root of the system
 So, on the native Arch machine:
 
 ```
-fakeroot -- bash -c 'bsdtar -xf [path/to/arch-rootfs.tar] && bsdtar -czaf arch-wsl.tar.gz root.x86_64/*'
+fakeroot -- bash -c 'bsdtar -xf [path/to/arch-rootfs.tar] && \
+bsdtar -czaf arch-wsl.tar.gz root.x86_64/*'
 ```
 
 Copy the new rootfs to the Windows machine.
