@@ -12,8 +12,8 @@ But lately, not so much, since there is Windows Subsystem for Linux.
 Of course, I'm not going to want to use Ubuntu, I want **the** distribution, Arch Linux.
 
 The only way to install it seems following [this guide](https://github.com/yuk7/ArchWSL),
-but even though giving a quick look at the code, everything seems rather okay, there's
-a *magic* prebuilt rootfs (and no generation scripts) and I don't really want inspect
+but even though giving a quick look at the code everything seems rather okay, there's
+a *magic* prebuilt rootfs (and no generation scripts) and I don't really want to inspect
 its contents thoroughly to see if there's anything malicious.
 
 So, I tried to find a way to install it manually from a rootfs downloaded from
