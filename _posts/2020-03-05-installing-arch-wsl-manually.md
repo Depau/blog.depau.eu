@@ -1,0 +1,119 @@
+---
+layout: post
+title: Installing Arch Linux on WSL, the Arch Way™️
+tags: archlinux wsl windows
+---
+
+My company's official OS is Windows 10. GNU/Linux is not allowed, not even Ubuntu or
+Red Hat. PAINFUL.
+
+But lately, not so much, since there is Windows Subsystem for Linux.
+
+Of course, I'm not going to want to use Ubuntu, I want **the** distribution, Arch Linux.
+
+The only way to install it seems following [this guide](https://github.com/yuk7/ArchWSL),
+but even though giving a quick look at the code, everything seems rather okay, there's
+a *magic* prebuilt rootfs (and no generation scripts) and I don't really want inspect
+its contents thoroughly to see if there's anything malicious.
+
+So, I tried to find a way to install it manually from a rootfs downloaded from
+[archlinux.org](https://archlinux.org).
+
+**Note:** another machine already running a GNU/Linux distro natively, preferrably Arch
+Linux, is required.
+
+## Fixing the rootfs
+
+Rootfs's downloaded from Arch mirrors contain the actual root filesystem under `/root.x86_64`.
+
+We have to fix that, because when Windows extracts it it expects the root of the tar to be
+the root of the system
+
+So, on the native Arch machine:
+
+```
+fakeroot -- bash -c 'bsdtar -xf [path/to/arch-rootfs.tar] && bsdtar -czaf arch-wsl.tar.gz root.x86_64/*'
+```
+
+Copy the new rootfs to the Windows machine.
+
+## Installing the rootfs
+
+Pick a suitable location for your WSL installation, such as `\Users\%username%\WSL\ArchLinux`.
+Picking a handy location makes it easy to copy files **from** WSL to somewhere else.
+
+**Note:** apparently, you can only copy files **from** WSL and **not to**. Either they won't
+show up in WSL at all, giving out 'Input/output error' on access, or it will crash Windows.
+
+Then run in the command prompt:
+
+```
+wsl --import DistroName \path\to\WSL\dir \path\to\arch-wsl.tar.gz
+```
+
+It looks like paths with spaces won't work with this tool on the command line, so make sure you `cd`
+into the path and use relative paths from there if your path has spaces.
+
+Anyway, that's about it. You can already run `wsl` or `bash` with no arguments to get into your
+WSL shell.
+
+There's a few catches, however, so go on.
+
+## First Arch setup
+
+- Initialize the pacman keyring
+
+  ```
+  pacman-key --init
+  pacman-key --populate archlinux
+  ```
+  Run again if it fails.
+
+- Pick a mirror in `/etc/pacman.d/mirrorlist`
+- Set up timezone, localization (see 
+  [Arch installation guide](https://wiki.archlinux.org/index.php/installation_guide#Time_zone))
+- Add a DNS server to `/etc/resolv.conf`
+- `pacman -Syu`
+
+
+## Making AUR packages
+
+The system is almost ready, except... you can't make any package.
+
+That's because unless you're running WSL 2 which runs an actual Linux kernel, they haven't
+implemented Unix SYSV IPC, which is used by `fakeroot`.
+
+A workaround is to use `fakeroot-tcp` from AUR which uses TCP/IP sockets instead of Unix IPC,
+the problem is that in order to make it you need `fakeroot`...
+
+The easiest solution is to build the package on a real Arch machine, then send it over and
+install it. The a-bit-less-easy solution is to make the package (it will fail). Then you
+overwrite `libfakeroot.so` in `/usr/lib` with the one you just built (in `src/fakeroot-tcp`),
+run `makepkg -R` and it should work fine this time.
+
+## Running GUI apps
+
+I use [vcxsrv](https://sourceforge.net/projects/vcxsrv/). However, setting up an X server isn't
+enough at times.
+
+If you're running GNOME GUI utilities, you'll likely run into the following issues:
+
+- `gnome-keyring` is not running as SSH agent
+- Programs that use `gsettings` will not run, not store settings, mysteriously crash without any
+  errors
+- Lack of theming
+- Lack of inter-process communication (i.e. DBus is not running)
+
+Over time I developed this set of scripts that will fix that for you, creating a session
+environment file that you will have to make sure is always loaded so programs will run properly:
+
+[https://github.com/Depau/wsl-startup](https://github.com/Depau/wsl-startup)
+
+
+*That's it* ;)
+
+Let me know if you found this useful. Also let me know any suggestions: I have to deal with
+Windows' crap every day at work, if you know something that will make it less painful, send
+me an email!
+
+
