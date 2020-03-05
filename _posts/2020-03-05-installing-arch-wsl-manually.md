@@ -111,6 +111,16 @@ environment file that you will have to make sure is always loaded so programs wi
 [https://github.com/Depau/wsl-startup](https://github.com/Depau/wsl-startup)
 
 
+# Other stuff
+
+If you're in my same situation and you're using Arch on WSL at work just because you must use
+Windows, it may be possible you're also using an SSH client called SecureCRT.
+
+If you are, you may want to check out my script [`shcrt`](https://github.com/Depau/shcrt). I'm
+planning to rewrite it in Python using urwid for a better (and faster) experience, but I haven't
+started yet.
+
+
 *That's it* ;)
 
 Let me know if you found this useful. Also let me know any suggestions: I have to deal with
