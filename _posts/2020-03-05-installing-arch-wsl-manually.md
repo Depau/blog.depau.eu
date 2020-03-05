@@ -81,7 +81,7 @@ There's a few catches, however, so go on.
 
 The system is almost ready, except... you can't make any package.
 
-That's because unless you're running WSL 2 which runs an actual Linux kernel, they haven't
+That's because unless you're running WSL 2 which runs an actual Linux kernel, Microsoft hasn't
 implemented Unix SYSV IPC, which is used by `fakeroot`.
 
 A workaround is to use `fakeroot-tcp` from AUR which uses TCP/IP sockets instead of Unix IPC,
