@@ -25,8 +25,13 @@ So, I tried to find a way to install it manually from a rootfs downloaded from
 **Note:** another machine already running a GNU/Linux distro natively, preferrably Arch
 Linux, is required.
 
-**Note 2:** I'm talking about WSL1. I do not know if this will work on WSL2, I haven't
-upgraded yet.
+~~**Note 2:** I'm talking about WSL1. I do not know if this will work on WSL2, I haven't
+upgraded yet.~~
+
+**Update 2021-05-01:** I was eventually forced to upgrade to WSL2, with a few additional steps everything still
+works fine.
+
+See the WSL2 section at the end
 
 ## Fixing the rootfs
 
@@ -115,6 +120,22 @@ Over time I developed this set of scripts that will fix that for you, creating a
 environment file that you will have to make sure is always loaded so programs will run properly:
 
 [https://github.com/Depau/wsl-startup](https://github.com/Depau/wsl-startup)
+
+
+## WSL2
+
+*Added on 2021-05-01*
+
+This setup works on WSL2 as well, but a few more steps are required.
+
+First of all you have to add a Windows Defender Firewall rule to allow WSL to access Vcxsrv, as
+described [here](https://github.com/cascadium/wsl-windows-toolbar-launcher#firewall-rules).
+
+Then, instead of enabling the `40_xorg_setup` wsl-startup script you will have to enable
+`40_xorg_setup_wsl2`, which will set the correct `DISPLAY` variable that points to the
+main Windows network.
+
+More info here: [https://stackoverflow.com/a/61110604/1124621](https://stackoverflow.com/a/61110604/1124621)
 
 
 # Other stuff
