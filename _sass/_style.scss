@@ -1,4 +1,5 @@
 @import "vars";
+@import "rouge_monokai";
 
 $font: "IBM Sans Mono", monospace;
 $heading_font: "Nanum Gothic Coding", monospace;
@@ -34,17 +35,78 @@ hr {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-code {
-    background: #FF0F0010;
-    border-radius: 3px;
-    border: solid 1px #FF0F0015;
-    color: #750700;
+:not(pre) > code {
+    background: $code-bg;
+    border-radius: 5px;
+    padding: 0 5px;
+    border: solid 1px $code-border;
+    color: $code-inline-fg;
     font-family: $font;
 
     a & {
       color: $accent;
-      border: solid 1px #FF0F0055;
+      border: solid 1px $code-link-border;
     }
+}
+
+
+div.highlight {
+  font-size: 15px;
+  background-color: $code-block-bg;
+  border-radius: 5px;
+  border: solid 1px $code-border;
+  color: white;
+  font-family: $font;
+  margin: 10px 0;
+  padding: 10px;
+
+  a & {
+    color: $accent;
+    border: solid 1px $code-link-border;
+  }
+
+  pre.highlight {
+    margin: 0;
+    background-color: initial;
+    overflow-x: scroll;
+  }
+}
+
+.wrap-code {
+  div.highlight pre.highlight {
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    //noinspection CssInvalidPropertyValue
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+
+    overflow-x: initial;
+  }
+}
+
+.join-code-blocks {
+  // Select first joined block of sequence
+  &:not(.join-code-blocks + .join-code-blocks) > div.highlight {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0;
+  }
+
+  // Select all other joined blocks
+  & + .join-code-blocks > div.highlight {
+    margin-top: 0;
+    padding-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: 0;
+  }
+}
+
+.text-center {
+  text-align: center;
 }
 
 /*
@@ -52,9 +114,9 @@ code {
  */
 
 #author-name {
-    font-size: 30px;
-    color: #272727;
-    display: inline-block;
+  font-size: 30px;
+  color: #272727;
+  display: inline-block;
 
     &:hover {
         border-bottom: solid 2px;
