@@ -1,6 +1,10 @@
 title: Davide Depau's Blog
+tagline: A blog about technology and random stuff
 url: "https://blog.depau.eu"
 baseurl: ""
+
+author:
+  twitter: DavideDepau
 
 markdown: kramdown
 highlighter: rouge
@@ -25,6 +29,7 @@ sass:
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-seo-tag
 
 exclude:
   - Gemfile
