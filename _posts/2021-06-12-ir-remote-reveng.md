@@ -425,6 +425,8 @@ It seems to work a lot more reliably when driven by a transistor, like this:
 
 Once the decoding is working I can ahead, press all the buttons and try to figure out the code. So that's what I did, I collected all the information in this table:
 
+<div class="table-overflow" markdown="block">
+
 | Value          | Temp | Fan  | Mode | Timer | Notes |
 |----------------|------|------|------|-------| ----- |
 | 0x82000683     | 26   | Auto | Cool |       |       |
@@ -452,6 +454,8 @@ Once the decoding is working I can ahead, press all the buttons and try to figur
 | 0x138A000683   | --   | --   | --   | 9.5h  |       |
 | 0x168A000683   | --   | --   | --   | 12h   |       |
 | 0x228A000683   | --   | --   | --   | 24h   |       |
+
+</div>
 
 Hexadecimal values are quite hard to analyze, so I converted them to binary, aligned them and analyzed them:
 
