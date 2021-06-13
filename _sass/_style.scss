@@ -24,6 +24,7 @@ a {
     color: $accent;
 }
 
+
 a:hover {
   border-bottom: solid 2px;
 }
@@ -68,7 +69,24 @@ div.highlight {
   pre.highlight {
     margin: 0;
     background-color: initial;
+    //noinspection CssOverwrittenProperties
     overflow-x: scroll;
+    //noinspection CssInvalidPropertyValue,CssOverwrittenProperties
+    overflow-x: overlay;
+
+    &::-webkit-scrollbar {
+      width: 7px;
+      height: 7px
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #b7b7b79e;
+      border-radius: 7px
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(58, 58, 58, 0.10)
+    }
   }
 }
 
