@@ -2,6 +2,7 @@
 layout: post
 title: Reverse-engineering an AC IR remote protocol
 tags: reverse-engineering infrared espressif
+image: /images/2021-06-12-ir-remote-reveng/dso-hooked-irled.jpg
 ---
 
 <style>
