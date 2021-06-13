@@ -90,8 +90,8 @@ div.highlight {
   }
 }
 
-.wrap-code {
-  div.highlight pre.highlight {
+.wrap-code div.highlight pre.highlight,
+:not(pre) > code {
     white-space: pre-wrap; /* css-3 */
     white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
     //noinspection CssInvalidPropertyValue
@@ -100,7 +100,6 @@ div.highlight {
     word-wrap: break-word; /* Internet Explorer 5.5+ */
 
     overflow-x: initial;
-  }
 }
 
 .join-code-blocks {
