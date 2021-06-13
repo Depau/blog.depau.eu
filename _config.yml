@@ -3,8 +3,7 @@ tagline: A blog about technology and random stuff
 url: "https://blog.depau.eu"
 baseurl: ""
 
-author:
-  twitter: DavideDepau
+author: Davide Depau
 
 markdown: kramdown
 highlighter: rouge
