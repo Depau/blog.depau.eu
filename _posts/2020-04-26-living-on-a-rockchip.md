@@ -7,6 +7,8 @@ tags: pinebookpro archlinux wayland sway linux
 I've been using my Pinebook Pro on a daily basis for a month or so.
 This is my experience report.
 
+<!--more-->
+
 ### Note:
 
 The name of the article was shamelessly stolen from Alyssa Rosenzweig's

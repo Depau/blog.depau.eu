@@ -13,6 +13,8 @@ footer: yes
 footer_url: "https://github.com/Depau/blog.depau.eu"
 footer_text: "Blog source code on GitHub"
 
+excerpt_separator: <!--more-->
+
 cookies: yes
 cookies_url: "https://depau.eu/cookies"
 

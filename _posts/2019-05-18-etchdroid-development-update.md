@@ -8,6 +8,8 @@ tags: etchdroid android development
 
 I wanted to write a little post on the status of [EtchDroid](https://github.com/EtchDroid/EtchDroid), my Android app to flash OS images to USB drives from Android.
 
+<!--more-->
+
 As you may see from the git history, I haven't done a lot lately. That's mainly because I've been very busy: I'm still not done with my college degree and I just got a new job.
 
 EtchDroid *will* continue to exist and I *will* find some time to work on it this year; hopefully I'll port it to other platforms too (not iOS).

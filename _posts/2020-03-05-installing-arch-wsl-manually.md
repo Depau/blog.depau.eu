@@ -11,6 +11,8 @@ But lately, not so much, since there is Windows Subsystem for Linux.
 
 Of course, I'm not going to want to use Ubuntu, I want **the** distribution, Arch Linux.
 
+<!--more-->
+
 ![My work computer desktop]({{ site.baseurl }}/images/2020-03-05-installing-arch-wsl-manually/screenshot.jpg)
 My work computer desktop
 

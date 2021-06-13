@@ -8,6 +8,8 @@ I wrote this post to share my opinions on GNU/Linux distributions, my
 setup, how I use it, how I got there and what I think is still wrong.
 I hope somebody may find it interesting or useful.
 
+<!--more-->
+
 First of all, a very short distro-hopping history:
 
 - 2010: Ubuntu

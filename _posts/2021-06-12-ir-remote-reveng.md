@@ -27,7 +27,6 @@ tags: reverse-engineering infrared espressif
 
 
 My new house has a Kelon-branded air-conditioning unit. Wouldn't it be nice to have it set up in [openHAB](https://www.openhab.org/)?
-
 I looked it up online and this unheard of brand's protocol is nowhere to be found. So I had to figure it out myself.
 
 I reverse engineered its protocol and contributed it to
@@ -35,7 +34,7 @@ I reverse engineered its protocol and contributed it to
 
 In this post I'd like to document my experience and what I learned from it.
 
-----
+<!--more-->
 
 ## First steps
 

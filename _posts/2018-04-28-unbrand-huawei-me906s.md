@@ -5,6 +5,8 @@ tags: me906s lt4132 reverse-engineering linux
 ---
 (or rebranding it)
 
+<!--more-->
+
 ### **Before you ask:** both the X1 Yoga and the X1 Carbon have NO ANTENNA, unless you have the 4G version. The SIM slot should work fine on all models (but it's not my fault if it doesn't)
 
 Around one year ago I bought a new laptop, a Lenovo ThinkPad X1 Yoga (1st gen). To save some money I bought it on eBay; it was not the top model with the 4G module I wanted, but I thought I may live without it anyway.

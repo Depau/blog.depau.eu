@@ -6,6 +6,8 @@ tags: etchdroid android development
 
 As promised in [last post]({{ site.baseurl }}{% link _posts/2019-05-18-etchdroid-development-update.md %}), EtchDroid development has resumed 🎉
 
+<!--more-->
+
 ![Git history]({{site.baseurl}}/images/2019-08-15-etchdroid-development-update/gitg.jpg)
 
 The reason why I had to put the development on hold (other than other personal reasons - remember: this is just a hobby project), is that I was basically stuck on a super boring part.
