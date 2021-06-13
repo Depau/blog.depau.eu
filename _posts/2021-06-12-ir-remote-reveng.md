@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reverse-engineering an AC IR remote protocol
-tags: reverse-engineering infrared remote esp32 esp8266
+tags: reverse-engineering infrared espressif
 ---
 
 <style>
