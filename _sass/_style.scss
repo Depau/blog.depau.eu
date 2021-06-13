@@ -102,6 +102,10 @@ div.highlight {
     overflow-x: initial;
 }
 
+.wrap-code div.highlight {
+  padding-bottom: 10px;
+}
+
 .join-code-blocks {
   // Select first joined block of sequence
   &:not(.join-code-blocks + .join-code-blocks) > div.highlight {
