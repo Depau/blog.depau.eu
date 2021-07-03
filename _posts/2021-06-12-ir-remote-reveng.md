@@ -619,6 +619,8 @@ With all this done, all that remains is to contribute the code to IRremote-ESP82
 
 I submitted a pull-request and, at the time of writing, it is being reviewed: [crankyoldgit/IRremoteESP8266#1494](https://github.com/crankyoldgit/IRremoteESP8266/pull/1494)
 
+**Update 2021-07-03:** it is now [merged 🎉](https://github.com/crankyoldgit/IRremoteESP8266/commit/7102d8fe83a6faae523a1b12c8e2c785c55a7031).
+
 Once that's done I will be soldering a simple board on a perfboard to drive the LED, then write a firmware to control it over MQTT.
 
 I also won't get into that because once again it's boring, but if you're into making something like this you can look at [this other firmware](https://github.com/Depau/air-quality-sensor-esp8266-fw/) I wrote for a similar purpose in the past. Nothing too fancy :)
