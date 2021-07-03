@@ -198,8 +198,7 @@ Code      : 0x726B6355 (50 Bits)
 uint16_t rawData[99] = {9034, 4504,  570, 1672,  570, 1674,  568, 592,  568, 592,  568, 590,  568, 622,  544, 596,  568, 1674,  568, 592,  568, 1652,  570, 1676,  568, 590,  570, 590,  570, 592,  568, 596,  568, 620,  544, 592,  570, 592,  568, 1676,  568, 594,  570, 592,  568, 592,  570, 592,  568, 592,  568, 594,  568, 1672,  568, 618,  544, 596,  568, 596,  568, 592,  568, 592,  570, 1676,  568, 592,  568, 592,  568, 594,  568, 592,  568, 596,  568, 592,  568, 590,  570, 592,  568, 590,  570, 590,  568, 590,  570, 590,  570, 616,  544, 594,  568, 592,  568, 592,  568};  // UNKNOWN 726B6355
 ```
 
-That `UNKNOWN` isn't something I'd call reassuring, but then I thought maybe it's actually receiving the code that it is
-showing makes sense.
+That `UNKNOWN` isn't something I'd call reassuring, but then I thought maybe the code it is showing makes sense.
 
 It turns out it doesn't. I tried sending it back using an IR LED and nothing happened on the remote.
 
@@ -236,7 +235,7 @@ So, after doing more research and looking at the waveforms from my scope, I lear
 
 - Send a sequence of signals
 - The data is encoded into the timings of each signal
-- Most remote send a "header" with different timings to tell the receiver "hey I'm sending stuff"
+- Most remotes send a "header" with different timings to tell the receiver "hey I'm sending stuff"
 - The length (in time) of each combination of "signal + no signal" section encodes each bit
 - Some remotes also send a "footer" which often is just a single regular bit code
 
@@ -316,7 +315,6 @@ bool IRrecv::decodeKelon(decode_results *results, uint16_t offset,
   return true;
 }
 ```
-{: .wrap-code}
 
 *Note: This is just the most relevant snippet. It turns out that the library is quite complicated, I actually had to make changes all over the place.*
 
@@ -367,7 +365,6 @@ void IRsend::sendKelon(const uint64_t data, const uint16_t nbits, const uint16_t
               repeat, 50);
 }
 ```
-{: .wrap-code}
 
 Except it didn't work.
 
@@ -428,6 +425,8 @@ It seems to work a lot more reliably when driven by a transistor, like this:
 
 Once the decoding is working I can ahead, press all the buttons and try to figure out the code. So that's what I did, I collected all the information in this table:
 
+<div class="table-overflow" markdown="block">
+
 | Value          | Temp | Fan  | Mode | Timer | Notes |
 |----------------|------|------|------|-------| ----- |
 | 0x82000683     | 26   | Auto | Cool |       |       |
@@ -455,6 +454,8 @@ Once the decoding is working I can ahead, press all the buttons and try to figur
 | 0x138A000683   | --   | --   | --   | 9.5h  |       |
 | 0x168A000683   | --   | --   | --   | 12h   |       |
 | 0x228A000683   | --   | --   | --   | 24h   |       |
+
+</div>
 
 Hexadecimal values are quite hard to analyze, so I converted them to binary, aligned them and analyzed them:
 
