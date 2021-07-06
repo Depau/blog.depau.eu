@@ -31,23 +31,26 @@ I did, though, solve the whitelist issue.
 
 ## Information gathering
 
-First thing I did was looking up a [GitHub page](https://github.com/abcdw/configs/blob/master/x1carbon5.org#wwan) I read while waiting for my module, which explained how [@abcdw](https://github.com/abcdw) managed to make his *Sierra* module work.
+First thing I did was look for info in the Internet.
+I found this [GitHub page](https://github.com/abcdw/configs/blob/master/x1carbon5.org#wwan) I read while waiting for my module, which explains how [@abcdw](https://github.com/abcdw) managed to make his *Sierra* module work.
 
 It didn't help, the modules are too different. Then I found an [official firmware upgrade](https://support.lenovo.com/it/en/downloads/ds118646) from Lenovo.
 
-I hot-plugged the module and tried it on Windows. No such luck: the module wasn't recognized.
+I hot-plugged the module and tried to run the updater on Windows. No such luck: the module wasn't recognized.
 
-I tried in way too many ways to extract the binaries from the executable. Usually either `7zip`, `RAR`, or `cabextract` work. Not this time. I ran the executables in a virtual machine, gathered the self-extracted files from Windows' temporary files (hint: type `%localappdata%` in Explorer's path box), then switched back to GNU/Linux and used `binwalk` to analyze them.
+I tried in way too many ways to extract the binaries from the executable. Usually either `7zip`, `RAR`, or `cabextract` work.
+Not this time. I ran the executables in a virtual machine, gathered the self-extracted files from Windows' temporary files (hint: type `%localappdata%` in Explorer's path box), then switched back to GNU/Linux and used `binwalk` to analyze them.
 
-A very interesting string came to my eyes multiple times: `balong_modem.bin`. I tried to look it up online and found interesting stuff, though nothing applied to my case. I found [balongflash](https://github.com/forth32/balongflash) and [balong-usbdload](https://github.com/forth32/balong-usbdload) + a bunch of articles that explained how to use them to flash some external USB modem by shorting some pins, assuming users already knew where to find the firmware images. _Nope._
+A very interesting string came to my eyes multiple times: `balong_modem.bin`. I tried to look it up online and found interesting stuff, though nothing applied to my case.
+I found [balongflash](https://github.com/forth32/balongflash) and [balong-usbdload](https://github.com/forth32/balong-usbdload) + a bunch of articles that explained how to use them to flash some external USB modem by shorting some pins, assuming users already knew where to find the firmware images. _Nope._
 
-After trying every possible query containing `balong`, I gave up and started to look for `HP lt4132 LTE/HSPA+ 4G Module`, the name the device reported itself as.  I found this [interesting article](https://toreanderson.github.io/2017/07/31/huawei-me906s-hp-lt4132-linux-ipv6.html) which didn't definitely help me unbrand my module, but it did help me ensure it was, _somehow_, working.
+After trying every possible query containing `balong`, I gave up and started to look for `HP lt4132 LTE/HSPA+ 4G Module`, the name the device reported itself as.  I found this [interesting article](https://toreanderson.github.io/2017/07/31/huawei-me906s-hp-lt4132-linux-ipv6.html) which definitely didn't help me unbrand my module, but it did help me ensure it was, _somehow_, working.
 
 ## The solution
 
 After reading the article, I stumbled upon [this](http://ftp.hp.com/pub/softpaq/sp79501-80000/sp79601.html): the HP-branded firmware. I tried to download and analyze it (to download it, change `html` to `exe`). The executables looked very similar: very similar size, same icon, similar filename, similar `binwalk`s.
 
-At some point, a software I read of in a magazine while I was in middle school came to my mind: [Resource Hacker](http://www.angusj.com/resourcehacker/#download). It's a closed-source, freeware program to extract resources embedded in Windows executables. I ran it and compared Lenovo's and HP's update tools:
+At some point, a software I read of in a magazine a while back came to my mind: [Resource Hacker](http://www.angusj.com/resourcehacker/#download). It's a closed-source, freeware program to extract resources embedded in Windows executables. I ran it and compared Lenovo's and HP's update tools:
 
 HP on the left - Lenovo on the right
 ![Configuration file]({{site.baseurl}}/images/unbranding-me906s/shot-2018-04-28_00-40-17.png)
@@ -72,8 +75,8 @@ I made some backups of both update binaries, opened Lenovo's updater with Resour
 1. Run each installer and find where files are extracted. You'll find one file. Copy it somewhere else.
 1. Run these new files too, one at a time. Go to `%localappdata%\Temp`, you should find a directory named `XXXX.tmp`, copy it somewhere else.
 1. In this directory you'll find `UpdateWizard.exe`. It contains everything we need. You'll also find some drivers, they might be helpful. Install them.
-1. Using Resource Hacker (it doesn't work well on Wine, use Windows) find the XML in `STRINGS`. Replace it with the one from HP's `UpdateWizard.exe`.
-1. Run the binary and... you're done.
+1. Using Resource Hacker (it doesn't work well on Wine, use Windows) find the XML in `STRINGS` in the Lenovo updater. Replace it with the one from HP's `UpdateWizard.exe`.
+1. Run the patched updater and... you're done.
 
 ![Flashing firmware]({{site.baseurl}}/images/unbranding-me906s/windows1.png)
 ![Upload completed]({{site.baseurl}}/images/unbranding-me906s/windows2.png)
