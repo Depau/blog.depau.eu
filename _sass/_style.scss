@@ -5,7 +5,7 @@
 $font: "IBM Sans Mono", monospace;
 $heading_font: "Nanum Gothic Coding", monospace;
 
-.opendyslexic {
+.opendyslexic:not(.forceregular) {
   font-family: "Open Dyslexic", monospace !important;
 
   .navbar {
@@ -15,6 +15,10 @@ $heading_font: "Nanum Gothic Coding", monospace;
   code, pre {
     font-family: "Open Dyslexic Mono", monospace !important;
   }
+
+  .forceregular {
+    font-family: $font !important;
+  }
 }
 
 /*
@@ -22,9 +26,9 @@ $heading_font: "Nanum Gothic Coding", monospace;
  */
 
 html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 body {
     margin: 0;
