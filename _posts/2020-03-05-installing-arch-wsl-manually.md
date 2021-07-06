@@ -13,6 +13,15 @@ Of course, I'm not going to want to use Ubuntu, I want **the** distribution, Arc
 
 <!--more-->
 
+### Update
+
+- I switched jobs, I don't have to use Windows anymore, and I can now happily do my work on Arch Linux. Natively.
+- I'm not a Windows expert, nor a WSL expert. I have done my own research and my findings and work are shared here.
+  If you ask me *"how do I do this Windows/WSL-specific thing"* and it is not already mentioned here, I probably have no clue.
+- I only know the major differences between WSL1 and WSL2 and I can't give you advice. It's proprietary software, I have no idea. Ask Bill. 
+- If you ask me whether you should use Arch on WSL or natively, I have an answer for you: delete Windows now.
+
+
 ![My work computer desktop]({{ site.baseurl }}/images/2020-03-05-installing-arch-wsl-manually/screenshot.jpg)
 My work computer desktop
 
