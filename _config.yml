@@ -26,8 +26,8 @@ sass:
     sass_dir: _sass
 
 plugins:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-sitemap
+  - jekyll-feed
   - jekyll-seo-tag
 
 exclude:
@@ -38,12 +38,9 @@ exclude:
   - CNAME
 
 kramdown:
-  # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
-  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
   syntax_highlighter: rouge
   syntax_highlighter_opts:
-    # Use existing pygments syntax highlighting css
     css_class: 'highlight'
   hard_wrap: true
   extensions: fenced_code_blocks
