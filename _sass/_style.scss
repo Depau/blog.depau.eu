@@ -1,8 +1,21 @@
 @import "vars";
 @import "rouge_monokai";
+@import "opendyslexic";
 
 $font: "IBM Sans Mono", monospace;
 $heading_font: "Nanum Gothic Coding", monospace;
+
+.opendyslexic {
+  font-family: "Open Dyslexic", monospace !important;
+
+  .navbar {
+    font-family: "Open Dyslexic", monospace !important;
+  }
+
+  code, pre {
+    font-family: "Open Dyslexic Mono", monospace !important;
+  }
+}
 
 /*
  * Basic
