@@ -53,5 +53,5 @@ nav:
    link: "https://depau.eu"
  - name: "<i class='remixicon-github-line'></i> GitHub"
    link: "https://github.com/Depau"
- - name: "<i class='remixicon-android-line'></i> EtchDroid"
-   link: "https://etchdroid.depau.eu"
+ - name: "<i class='remixicon-archive-line'></i> Projects"
+   link: "https://depau.eu/#projects"
