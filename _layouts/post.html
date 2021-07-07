@@ -3,13 +3,8 @@ layout: default
 ---
 
 <article class="post">
-  <span class="tags">Tags: 
-  {% for tag in page.tags %}
-    {% capture tag_name %}{{ tag }}{% endcapture %}
-    <a href="/tag/{{ tag_name }}" class="tag"><code><nobr>{{ tag_name }}</nobr></code></a>
-  {% endfor %}
-  </span>
-  
+  {% include tags.html tags=page.tags %}
+
   <p class="meta">Written on {{ page.date | date: '%B %d, %Y' }} / <span class="time">{{ page.content | number_of_words | divided_by:180 | plus: 1 }}</span> minute read</p>
 
   <h1>{{ page.title }}</h1>
