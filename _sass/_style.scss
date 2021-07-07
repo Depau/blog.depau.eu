@@ -278,5 +278,11 @@ div.cc-window {
     vertical-align: bottom;
 }
 
+h1 {
+    [class^="remixicon-"], [class*=" remixicon-"] {
+        font-size: 24px;
+    }
+}
+
 @import "typography";
 @import "tables";
