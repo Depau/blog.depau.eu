@@ -18,7 +18,7 @@ title: Tags
   <h2><a href="{{ site.baseurl }}/tag/{{ tag[0] }}">{{ tagtitle | default: tag[0] }}</a></h2>
   <ul>
     {% for post in tag[1] %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})</li>
+      <li>{{ post.date | date_to_string }}: <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 {% endfor %}
