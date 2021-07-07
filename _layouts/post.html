@@ -5,7 +5,7 @@ layout: default
 <article class="post">
   {% include tags.html tags=page.tags %}
 
-  <p class="meta">Written on {{ page.date | date: '%B %d, %Y' }} / <span class="time">{{ page.content | number_of_words | divided_by:180 | plus: 1 }}</span> minute read</p>
+  <p>{% include postmeta.html post=page %}</p>
 
   <h1>{{ page.title }}</h1>
 
