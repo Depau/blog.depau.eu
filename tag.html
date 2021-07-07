@@ -3,14 +3,22 @@ layout: default
 title: Tags
 ---
 
-{% capture temptags %}
-  {% for tag in site.tags %}
-    {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+<h1>All tags</h1>
+
+{% assign sortedtags = site.tags | sort %}
+{% for tag in sortedtags %}
+  {% assign tagpagename = tag[0] | append: ".md" %}
+  {% for p in site.pages %}
+    {% if p.name == tagpagename %}
+      {% assign tagtitle = p.title | remove_first: "Tag: " %}
+      {% break %}
+    {% endif %}
   {% endfor %}
-{% endcapture %}
-{% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
-{% for temptag in sortedtemptags %}
-  {% assign tagitems = temptag | split: '#' %}
-  {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
-  <a href="/tag/{{ tagname }}"><code class="highligher-rouge"><nobr>{{ tagname }}</nobr></code></a>
+
+  <h2><a href="{{ site.baseurl }}/tag/{{ tag[0] }}">{{ tagtitle | default: tag[0] }}</a></h2>
+  <ul>
+    {% for post in tag[1] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})</li>
+    {% endfor %}
+  </ul>
 {% endfor %}
