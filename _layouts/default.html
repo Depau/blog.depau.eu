@@ -24,10 +24,10 @@
         {% assign url = site.url | append: site.baseurl | append: page.url %}
     {% endif %}
     <meta name="description" content="{{ desc }}">
-    <link href="/assets/css/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/css/remixicon/remixicon.css?v={{ site.v }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700|Nanum+Gothic+Coding:400,700&display=swap" rel="stylesheet">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="/feed.xml" />
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css?nocache=1">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css?v={{ site.v }}">
 
     {% seo title=false %}
 
@@ -113,7 +113,7 @@ window.cookieconsent.initialise({
   })();
 </script>
 <noscript><p><img src="https://analytics.depau.eu/matomo.php?idsite=4&amp;rec=1" style="border:0;" alt="" /></p></noscript>
-<script type="text/javascript" src="{{ site.baseurl }}/assets/js/opendyslexic.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/opendyslexic.js?v={{ site.v }}"></script>
 <!-- End Matomo Code -->
 
 </body>
