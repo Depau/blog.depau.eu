@@ -1,7 +1,7 @@
 'use strict';
 
 const dyslexicButtonString = Object.freeze({
-    "regular": "I'm dyslexic",
+    "regular": "Dyslexic?",
     "opendyslexic": "Regular font"
 });
 
