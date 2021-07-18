@@ -37,6 +37,14 @@ In this post I'd like to document my experience and what I learned from it.
 
 <!--more-->
 
+> ### Note
+> 
+> Since when this article was published, the code for the snippets shown has changed in the actual library code.
+>
+> The changes are not particularly dramatic, therefore I decided to leave the snippets as they are, since my goal is to show my learning process, not perfect code (not implying that the final result is perfect - you get what I mean, I hope).
+>
+> If you're interested in the actual fully-working and properly tested code, check out the actual [library source code](https://github.com/crankyoldgit/IRremoteESP8266/blob/master/src/ir_Kelon.cpp).
+
 ## First steps
 
 ### Mi Remote app
