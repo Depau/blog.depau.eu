@@ -10,7 +10,7 @@ This post aims to provide solutions to the most common issues with Btrfs.
 
 At the end you will also find some tricks that exploit btrfs' great functionality to speed up common tasks.
 
-<!-- more -->
+<!--more-->
 
 ---
 
